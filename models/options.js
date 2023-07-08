@@ -19,5 +19,5 @@ const optionSchema=new mongoose.Schema({
     }
 })
 
-const Option=mongoose.model('Option',optionSchema);
-module.exports=Option
+const Option = mongoose.model('Option', optionSchema);
+export default Option;
