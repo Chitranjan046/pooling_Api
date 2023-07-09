@@ -4,11 +4,11 @@ const optionSchema=new mongoose.Schema({
 
     option:{
         type:String,
-        required:true
+        required:true,
     },
     question:{
-        type:mongoose.Schema.Types.ObjectId,
-        required:true
+        type:mongoose.SchemaTypes.ObjectId,
+        required:true,
     },
     vote:{
         type:Number,
@@ -16,7 +16,9 @@ const optionSchema=new mongoose.Schema({
     },
     add_vote:{
         type:String,
-    }
-})
+    },
+}
+
+);
 
 module.exports = mongoose.model('Option', optionSchema);
