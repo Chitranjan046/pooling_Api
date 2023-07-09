@@ -21,7 +21,7 @@ module.exports.create = async (req, res) => {
         console.log(question);
         res.send(question);
     } else {
-        res.send('Question does not exist');
+        res.send(' No Sir Question does not exist');
     }
 };
 
@@ -35,7 +35,7 @@ module.exports.add_vote = async (req, res) => {
         console.log(option);
         res.send(option);
     } else {
-        res.send('Option does not exist');
+        res.send(' No Option  not exist');
     }
 };
 
@@ -49,7 +49,7 @@ module.exports.delete = async (req, res) => {
         const question = await Question.findByIdAndUpdate(questionId, { $pull: { options: req.params.id } });
         await Option.findByIdAndDelete(req.params.id);
         console.log(question);
-        res.send('Option deleted');
+        res.send(' Yes Option deleted');
     } else {
         res.send('ID does not exist');
     }
